@@ -22,7 +22,7 @@ public class Maze
         if (character.Health < 100)
         {
             character.Health = Math.Min(100, character.Health + medicine.HealingPercentage);
-            MessageBox.Show($"Собрано лекарство! Здоровье восстановлено на {medicine.HealingPercentage}%.");
+            MessageBox.Show($"Медицина в организме. Здоровье восстановлено на {medicine.HealingPercentage}%.");
         }
         else
         {
@@ -33,7 +33,7 @@ public class Maze
 
         if (character.Health == 0)
         {
-            MessageBox.Show("Поражение - закончилось здоровье.");
+            MessageBox.Show("Гам Овер - ХэПэ нету.");
         }
     }
 
@@ -42,11 +42,11 @@ public class Maze
         if (character.MovesSinceLastHealing >= 10)
         {
             character.Energy += coffeeCup.EnergyBoost;
-            MessageBox.Show($"Собрана чашка кофе! Запас энергии повышен на {coffeeCup.EnergyBoost} единиц.");
+            MessageBox.Show($"О, новая доза кофеина. Запас энергии повышен на {coffeeCup.EnergyBoost} единиц.");
         }
         else
         {
-            MessageBox.Show("Вы не можете выпить кофе, так как совершили менее 10 перемещений после последнего лекарства.");
+            MessageBox.Show("Ээ, чел, нет, тебе придётся ждать, так как ты совершил менее 10 перемещений после последнего лекарства.");
         }
 
         if (character.Energy == 0)
@@ -60,8 +60,8 @@ public class Maze
         if (character.Energy >= 10)
         {
             character.Energy -= 10;
-            // Здесь можно добавить логику для обработки врагов в радиусе
-            MessageBox.Show("Применено джедаевское меч!");
+            
+            MessageBox.Show("Да пребудет с тобой сила");
         }
         else
         {
@@ -79,17 +79,17 @@ public class Maze
         if (character.Energy >= 10)
         {
             character.Energy -= 10;
-            // Здесь можно добавить логику для обработки врагов в радиусе
-            MessageBox.Show("Применен пинок спартанца!");
+            
+            MessageBox.Show("THIS IS SPAAARTAAAAA");
         }
         else
         {
-            MessageBox.Show("Недостаточно энергии для применения пинка спартанца.");
+            MessageBox.Show("Недостаточно энергии для применения СПААААРТЫЫЫЫЫЫ.");
         }
 
         if (character.Energy == 0)
         {
-            MessageBox.Show("Поражение - закончилась энергия.");
+            MessageBox.Show("Поражение - нема энергии.");
         }
     }
 }
